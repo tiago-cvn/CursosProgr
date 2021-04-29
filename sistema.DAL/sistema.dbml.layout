@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="sistema">
+  <DataContextMoniker Name="/sistemaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="51a983d9-d720-4208-b819-e700e631a062" absoluteBounds="0.75, 0.75, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/sistemaDataContext/categoria" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62267c7b-4029-4550-b85e-b88c172292a6" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="54876c44-bc5a-4b74-96a3-8299d5113881" absoluteBounds="3.5, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/sistemaDataContext/produtos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d9836bc3-631c-4e52-88cb-b72a33d41c5e" absoluteBounds="3.515, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.34699625651042); (3.5 : 1.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/sistemaDataContext/categoria/categoria_produtos" />
+      <nodes>
+        <classShapeMoniker Id="51a983d9-d720-4208-b819-e700e631a062" />
+        <classShapeMoniker Id="54876c44-bc5a-4b74-96a3-8299d5113881" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

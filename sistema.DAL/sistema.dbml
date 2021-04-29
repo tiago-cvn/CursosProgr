@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="db_sistema" Class="sistemaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=TIAGO-TN;Initial Catalog=db_sistema;Persist Security Info=True;User ID=sa" SettingsObjectName="sistema.DAL.Properties.Settings" SettingsPropertyName="db_sistemaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tb_categoria" Member="categoria">
+    <Type Name="categoria">
+      <Column Name="id_categoria" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="desc_categoria" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Association Name="categoria_produtos" Member="produtos" ThisKey="id_categoria" OtherKey="Id_categoria" Type="produtos" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_produtos" Member="produtos">
+    <Type Name="produtos">
+      <Column Name="id_produto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="desc_produto" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="valor" Type="System.Decimal" DbType="Decimal(25,2)" CanBeNull="true" />
+      <Column Name="Id_categoria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="categoria_produtos" Member="categoria" ThisKey="Id_categoria" OtherKey="id_categoria" Type="categoria" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
